@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy | JR Web Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #090909;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+/* Hero */
+
+.privacy-hero {
+  padding: 100px 7% 85px;
+  text-align: center;
+  background: radial-gradient(circle at top, #252014, #090909 65%);
+  border-bottom: 1px solid #292929;
+}
+
+.privacy-tag {
+  color: #ffc928;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.privacy-hero h1 {
+  font-size: clamp(35px, 5vw, 55px);
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.privacy-hero h1 span {
+  color: #ffc928;
+}
+
+.privacy-hero p {
+  color: #999;
+  font-size: 14px;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.9;
+}
+
+.privacy-date {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 9px 17px;
+  background: #191919;
+  border: 1px solid #333;
+  border-radius: 30px;
+  color: #ffc928;
+  font-size: 11px;
+}
+
+/* Main Content */
+
+.privacy-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 75px 25px;
+}
+
+.privacy-intro {
+  background: #141414;
+  border: 1px solid #292929;
+  border-left: 3px solid #ffc928;
+  padding: 28px;
+  border-radius: 8px;
+  margin-bottom: 45px;
+}
+
+.privacy-intro p {
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Policy Sections */
+
+.privacy-block {
+  padding: 30px 0;
+  border-bottom: 1px solid #252525;
+}
+
+.privacy-block h2 {
+  color: #fff;
+  font-size: 21px;
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.privacy-block h2 span {
+  color: #ffc928;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.privacy-block p {
+  color: #999;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 13px;
+}
+
+.privacy-block ul {
+  padding-left: 22px;
+  margin: 15px 0;
+}
+
+.privacy-block li {
+  color: #999;
+  font-size: 13px;
+  line-height: 2;
+  padding-left: 5px;
+  margin-bottom: 7px;
+}
+
+.privacy-block li::marker {
+  color: #ffc928;
+}
+
+.privacy-block strong {
+  color: #ddd;
+  font-weight: 600;
+}
+
+/* Contact Box */
+
+.privacy-contact {
+  margin-top: 50px;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(130deg, #201c10, #121212);
+  border: 1px solid #40351b;
+  border-radius: 12px;
+}
+
+.privacy-contact h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.privacy-contact h2 span {
+  color: #ffc928;
+}
+
+.privacy-contact p {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 23px;
+}
+
+.privacy-contact a {
+  display: inline-block;
+  background: #ffc928;
+  color: #090909;
+  text-decoration: none;
+  padding: 13px 25px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.privacy-contact a:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width: 600px) {
+
+  .privacy-hero {
+    padding: 75px 6% 65px;
+  }
+
+  .privacy-wrapper {
+    padding: 45px 6%;
+  }
+
+  .privacy-block h2 {
+    font-size: 18px;
+  }
+
+  .privacy-intro {
+    padding: 22px;
+  }
+
+  .privacy-contact {
+    padding: 30px 20px;
+  }
+
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 78px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: rgba(8, 9, 11, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.brand-jr {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+    color: white;
+}
+
+.navbar nav .nav-cta {
+    color: #090909;
+    background: var(--gold);
+    padding: 10px 17px;
+    border-radius: 6px;
+    font-weight: 800;
+}
+
+</style>
+</head>
+
+<body>
+  
+
+<!-- Hero Section -->
+
+<section class="privacy-hero">
+
+  <span class="privacy-tag">LEGAL INFORMATION</span>
+
+  <h1>Privacy <span>Policy</span></h1>
+
+  <p>
+    Your privacy matters to us. Learn how JR Web Agency
+    collects, uses, protects and manages your personal
+    information when you visit our website or use our services.
+  </p>
+
+  <span class="privacy-date">
+    <a href="index.html">
+      Return to Home
+    </a>
+    
+  </span>
+
+</section>
+
+
+<!-- Privacy Content -->
+
+<main class="privacy-wrapper">
+
+  <div class="privacy-intro">
+    <p>
+      At JR Web Agency, we respect your privacy and are
+      committed to protecting the personal information
+      you share with us. This Privacy Policy explains
+      what information we may collect, how we use it,
+      and the choices available to you when interacting
+      with our website and services.
+    </p>
+  </div>
+
+
+  <!-- 01 -->
+
+  <section class="privacy-block">
+    <h2><span>01.</span> Information We Collect</h2>
+
+    <p>
+      We may collect certain information when you visit
+      our website, contact us, or request our services.
+      This information may include:
+    </p>
+
+    <ul>
+      <li>Name and contact information.</li>
+      <li>Email address and phone number.</li>
+      <li>Business or project requirements you choose to share.</li>
+      <li>Messages and inquiries submitted through our contact forms.</li>
+      <li>Basic technical information, such as browser type and device information.</li>
+    </ul>
+
+    <p>
+      We only request information that is reasonably
+      necessary to respond to inquiries and provide
+      our services.
+    </p>
+  </section>
+
+
+  <!-- 02 -->
+
+  <section class="privacy-block">
+    <h2><span>02.</span> How We Use Your Information</h2>
+
+    <p>
+      The information we collect may be used for the
+      following purposes:
+    </p>
+
+    <ul>
+      <li>To respond to your questions and inquiries.</li>
+      <li>To communicate about projects and services.</li>
+      <li>To prepare proposals and project quotations.</li>
+      <li>To improve our website and user experience.</li>
+      <li>To provide customer support.</li>
+      <li>To maintain website security and prevent misuse.</li>
+    </ul>
+
+    <p>
+      We do not sell your personal information to third
+      parties.
+    </p>
+  </section>
+
+
+  <!-- 03 -->
+
+  <section class="privacy-block">
+    <h2><span>03.</span> Cookies and Tracking Technologies</h2>
+
+    <p>
+      Our website may use cookies or similar technologies
+      to improve functionality, understand website traffic
+      and enhance the browsing experience.
+    </p>
+
+    <p>
+      Cookies are small files stored on your device.
+      You can manage or disable cookies through your
+      browser settings. Some website features may not
+      work properly if certain cookies are disabled.
+    </p>
+  </section>
+
+
+  <!-- 04 -->
+
+  <section class="privacy-block">
+    <h2><span>04.</span> Data Protection and Security</h2>
+
+    <p>
+      We take reasonable technical and organizational
+      measures to protect personal information against
+      unauthorized access, alteration, disclosure or loss.
+    </p>
+
+    <p>
+      However, no method of online transmission or
+      electronic storage can be guaranteed to be
+      completely secure.
+    </p>
+  </section>
+
+
+  <!-- 05 -->
+
+  <section class="privacy-block">
+    <h2><span>05.</span> Sharing Your Information</h2>
+
+    <p>
+      We do not sell or rent your personal information.
+      We may share limited information only when necessary:
+    </p>
+
+    <ul>
+      <li>With service providers who help us operate our website or deliver services.</li>
+      <li>When required by applicable law or a valid legal request.</li>
+      <li>To protect our rights, website security or prevent fraud.</li>
+    </ul>
+
+    <p>
+      Where appropriate, we expect service providers to
+      handle information responsibly and securely.
+    </p>
+  </section>
+
+
+  <!-- 06 -->
+
+  <section class="privacy-block">
+    <h2><span>06.</span> Third-Party Websites and Services</h2>
+
+    <p>
+      Our website may contain links to external websites
+      or use third-party services. These websites and
+      services have their own privacy policies.
+    </p>
+
+    <p>
+      JR Web Agency is not responsible for the privacy
+      practices or content of external websites.
+      We encourage visitors to review their privacy
+      policies before sharing personal information.
+    </p>
+  </section>
+
+
+  <!-- 07 -->
+
+  <section class="privacy-block">
+    <h2><span>07.</span> Data Retention</h2>
+
+    <p>
+      We retain personal information only for as long
+      as reasonably necessary to respond to inquiries,
+      manage projects, provide services, meet legal
+      obligations or resolve disputes.
+    </p>
+
+    <p>
+      When information is no longer required, we take
+      reasonable steps to securely delete or dispose
+      of it, subject to applicable legal requirements.
+    </p>
+  </section>
+
+
+  <!-- 08 -->
+
+  <section class="privacy-block">
+    <h2><span>08.</span> Your Privacy Rights</h2>
+
+    <p>
+      Depending on applicable laws, you may have the
+      right to:
+    </p>
+
+    <ul>
+      <li>Request access to your personal information.</li>
+      <li>Ask us to correct inaccurate information.</li>
+      <li>Request deletion of your personal information.</li>
+      <li>Withdraw consent where processing is based on consent.</li>
+      <li>Ask questions about how your information is handled.</li>
+    </ul>
+
+    <p>
+      You can contact us using the details provided
+      below to make a privacy-related request.
+    </p>
+  </section>
+
+
+  <!-- 09 -->
+
+  <section class="privacy-block">
+    <h2><span>09.</span> Children's Privacy</h2>
+
+    <p>
+      Our website and services are not specifically
+      directed toward children. We do not knowingly
+      collect personal information from children
+      without appropriate authorization where required
+      by applicable law.
+    </p>
+  </section>
+
+
+  <!-- 10 -->
+
+  <section class="privacy-block">
+    <h2><span>10.</span> Changes to This Privacy Policy</h2>
+
+    <p>
+      We may update this Privacy Policy from time to
+      time to reflect changes in our practices,
+      services or applicable legal requirements.
+    </p>
+
+    <p>
+      Any updated version will be published on this
+      page with a revised Last Updated date.
+    </p>
+  </section>
+
+
+  <!-- 11 -->
+
+  <section class="privacy-block">
+    <h2><span>11.</span> Contact Us</h2>
+
+    <p>
+      If you have questions, concerns or requests
+      regarding this Privacy Policy or the way your
+      personal information is handled, please contact us:
+    </p>
+
+    <ul>
+      <li><strong>Agency:</strong> JR Web Agency</li>
+      <li><strong>Email:</strong> jrwebagency@gmail.com</li>
+      <li><strong>Phone:</strong> +92 307 3322813</li>
+      <li><strong>Location:</strong> Multan, Punjab, Pakistan</li>
+    </ul>
+  </section>
+
+
+  <!-- Contact CTA -->
+
+  <div class="privacy-contact">
+    <h2>Your Privacy, <span>Our Responsibility.</span></h2>
+
+    <p>
+      Have a question about your personal information?
+      Get in touch with our team.
+    </p>
+
+    <a href="contact.html">
+      Contact Us 
+    </a>
+  </div>
+
+</main>
+<script>
+  /* =================================
+   MOBILE NAVBAR TOGGLE
+================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    if (isOpen) {
+        menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+    } else {
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+});
+
+// Close menu after clicking a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    });
+
+});
+</script>
+</body>
+</html>

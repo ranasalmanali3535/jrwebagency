@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordPress Development | JR Web Agency</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+      :root {
+        --bg: #090909;
+        --card: #151515;
+        --gold: #ffc928;
+        --white: #fff;
+        --gray: #aaa;
+        --border: #292929;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg);
+        color: var(--white);
+        font-family: "DM Sans", sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      section {
+        padding: 85px 7%;
+      }
+      .container {
+        max-width: 1150px;
+        margin: auto;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Outfit", sans-serif;
+      }
+      h2 {
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.2;
+      }
+      p {
+        color: var(--gray);
+        font-size: 15px;
+        line-height: 1.9;
+      }
+      .gold {
+        color: var(--gold);
+      }
+      .eyebrow {
+        color: var(--gold);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+      }
+      .btn {
+        display: inline-block;
+        background: var(--gold);
+        color: #090909;
+        padding: 15px 25px;
+        border-radius: 5px;
+        font-weight: 800;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        background: white;
+        transform: translateY(-3px);
+      }
+      .hero {
+        min-height: 470px;
+        display: flex;
+        align-items: center;
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.55)),
+          url("https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1600")
+            center/cover;
+      }
+      .hero-content {
+        max-width: 720px;
+      }
+      .hero h1 {
+        font-size: clamp(40px, 6vw, 65px);
+        line-height: 1.1;
+        margin: 20px 0;
+      }
+      .hero p {
+        max-width: 620px;
+        margin-bottom: 28px;
+      }
+      .breadcrumb {
+        margin-top: 25px;
+        color: #aaa;
+        font-size: 13px;
+      }
+      .breadcrumb span {
+        color: var(--gold);
+        margin: 0 8px;
+      }
+      .intro {
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+      }
+      .intro p {
+        margin-top: 18px;
+      }
+      .center {
+        text-align: center;
+      }
+      .center > p {
+        max-width: 650px;
+        margin: 15px auto 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 40px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 28px;
+        transition: 0.3s;
+      }
+      .card:hover {
+        border-color: var(--gold);
+        transform: translateY(-6px);
+      }
+      .icon {
+        font-size: 28px;
+        color: var(--gold);
+        margin-bottom: 18px;
+      }
+      .card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+      .card p {
+        font-size: 14px;
+      }
+      .check-list {
+        list-style: none;
+        margin-top: 18px;
+      }
+      .check-list li {
+        font-size: 13px;
+        color: #ddd;
+        margin: 12px 0;
+      }
+      .check-list li:before {
+        content: "✓";
+        color: var(--gold);
+        margin-right: 10px;
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 55px;
+        align-items: center;
+      }
+      .split img {
+        width: 100%;
+        height: 410px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .split p {
+        margin: 18px 0;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 40px;
+      }
+      .step {
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 25px;
+        border-radius: 9px;
+      }
+      .step strong {
+        font-size: 32px;
+        color: var(--gold);
+        font-family: "Outfit";
+      }
+      .step h3 {
+        margin: 12px 0;
+      }
+      .faq {
+        max-width: 820px;
+        margin: 35px auto 0;
+        text-align: left;
+      }
+      .faq-item {
+        border: 1px solid var(--border);
+        background: var(--card);
+        margin-bottom: 12px;
+        border-radius: 7px;
+      }
+      .faq button {
+        width: 100%;
+        padding: 20px;
+        background: none;
+        border: 0;
+        color: white;
+        text-align: left;
+        font-size: 15px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+      .faq button span {
+        color: var(--gold);
+        font-size: 21px;
+      }
+      .answer {
+        display: none;
+        padding: 0 20px 20px;
+        color: var(--gray);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      .faq-item.active .answer {
+        display: block;
+      }
+      .cta {
+        padding: 65px 25px;
+        text-align: center;
+        border: 1px solid #51401a;
+        border-radius: 12px;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.93)),
+          url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200")
+            center/cover;
+      }
+      .cta h2 {
+        margin: 15px 0;
+      }
+      .cta p {
+        max-width: 600px;
+        margin: 0 auto 25px;
+      }
+      @media (max-width: 850px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .split {
+          gap: 30px;
+        }
+        .steps {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        section {
+          padding: 65px 6%;
+        }
+        .hero {
+          min-height: 430px;
+        }
+        .grid,
+        .split {
+          grid-template-columns: 1fr;
+        }
+        .split img {
+          height: 290px;
+        }
+        .steps {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .step {
+          padding: 18px 12px;
+        }
+      }
+      .site-header {
+    min-height: 80px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #090909;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    color: #ffc928;
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span,
+.site-footer h3 span {
+    color: white;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.site-header nav a,
+.footer-links a {
+    color: #ddd;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.site-header nav a:hover,
+.footer-links a:hover {
+    color: #ffc928;
+}
+
+.site-footer {
+    padding: 45px 7%;
+    text-align: center;
+    background: #141414;
+    border-top: 1px solid #292929;
+}
+
+.site-footer h3 {
+    color: #ffc928;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.site-footer p {
+    margin: 10px 0;
+    font-size: 13px;
+}
+
+.site-footer a {
+    color: #ffc928;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 25px 0;
+}
+
+.copyright {
+    border-top: 1px solid #292929;
+    padding-top: 20px;
+}
+
+@media(max-width:650px) {
+    .site-header {
+        flex-direction: column;
+    }
+
+    .site-header nav {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    background: #08090B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-jr {
+    color: #ffc928;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* DESKTOP NAVIGATION */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc928;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffc928;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: static; /* Important: overlay khatam */
+
+        width: 100%;
+        background: #11163f;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+/* DESKTOP: HAMBURGER ALWAYS HIDDEN */
+@media (min-width: 769px) {
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+}
+
+/* MOBILE MENU FIX */
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none !important;
+        width: 100%;
+        position: static;
+        flex-direction: column;
+        background: #11163f;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+    </style>
+  </head>
+  <body>
+  <header class="navbar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-jr">JR</span>
+        <span>WEB AGENCY</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+         <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+       <a href="https://ranasalmanali3535.github.io/ranasalmanali_portfolio/">Portfolio</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">WORDPRESS DEVELOPMENT</span>
+        <h1>
+          Powerful WordPress Websites for
+          <span class="gold">Your Business.</span>
+        </h1>
+        <p>
+          We create professional WordPress websites that are flexible, easy to
+          manage, and designed around your brand and business requirements.
+        </p>
+        <a href="contact.html" class="btn">Build Your WordPress Website →</a>
+        <div class="breadcrumb">
+          Home <span>/</span> Services <span>/</span> WordPress Development
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section>
+      <div class="container intro">
+        <span class="eyebrow">WORDPRESS EXPERTISE</span>
+        <h2>
+          Make Your Website Work for <span class="gold">Your Business.</span>
+        </h2>
+        <p>
+          WordPress offers a flexible platform for business websites, blogs, and
+          online stores. We help you create a website that reflects your brand,
+          organizes your content, and gives you practical ways to manage your
+          online presence.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <div class="container center">
+        <span class="eyebrow">OUR WORDPRESS SERVICES</span>
+        <h2>What We Can <span class="gold">Build for You.</span></h2>
+        <p>Explore our WordPress development and customization services.</p>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">▣</div>
+            <h3>Business Websites</h3>
+            <p>
+              Professional websites that introduce your business and present
+              your services clearly.
+            </p>
+            <ul class="check-list">
+              <li>Company websites</li>
+              <li>Service pages</li>
+              <li>Contact pages</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">✎</div>
+            <h3>Elementor Website Design</h3>
+            <p>
+              Visually structured pages using Elementor's website-building
+              tools.
+            </p>
+            <ul class="check-list">
+              <li>Custom page layouts</li>
+              <li>Section design</li>
+              <li>Responsive styling</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">🛒</div>
+            <h3>WooCommerce Stores</h3>
+            <p>
+              WordPress-based online stores for managing products and customer
+              orders.
+            </p>
+            <ul class="check-list">
+              <li>Product pages</li>
+              <li>Shopping cart setup</li>
+              <li>Store configuration</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">⚙</div>
+            <h3>WordPress Customization</h3>
+            <p>
+              Adapt themes and website functionality to better match your
+              requirements.
+            </p>
+            <ul class="check-list">
+              <li>Theme customization</li>
+              <li>Plugin configuration</li>
+              <li>Layout adjustments</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">↻</div>
+            <h3>Website Redesign</h3>
+            <p>
+              Refresh an existing website with improved structure, visuals, and
+              usability.
+            </p>
+            <ul class="check-list">
+              <li>Modern layouts</li>
+              <li>Content organization</li>
+              <li>Mobile-friendly design</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">🛠</div>
+            <h3>Maintenance & Support</h3>
+            <p>
+              Keep your WordPress website updated and maintain its technical
+              functionality.
+            </p>
+            <ul class="check-list">
+              <li>Updates and backups</li>
+              <li>Plugin maintenance</li>
+              <li>Bug troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section style="background: #101010">
+      <div class="container split">
+        <img
+          src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1000"
+          alt="Website design displayed on a computer"
+        />
+        <div>
+          <span class="eyebrow">WHY WORDPRESS?</span>
+          <h2>
+            A Flexible Platform for
+            <span class="gold">Your Online Presence.</span>
+          </h2>
+          <p>
+            WordPress provides a flexible content management system that can
+            support different types of websites. It can be extended with themes
+            and plugins to match many business needs.
+          </p>
+          <ul class="check-list">
+            <li>Manage website content through a dashboard</li>
+            <li>Choose from a wide range of themes</li>
+            <li>Extend features with suitable plugins</li>
+            <li>Build business websites and online stores</li>
+            <li>Expand your website as your needs change</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section>
+      <div class="container center">
+        <span class="eyebrow">OUR DEVELOPMENT PROCESS</span>
+        <h2>From Idea to <span class="gold">WordPress Website.</span></h2>
+        <p>
+          We follow a structured approach to plan, design, configure, and
+          prepare your website.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <strong>01</strong>
+            <h3>Discussion</h3>
+            <p>We understand your business and website requirements.</p>
+          </div>
+          <div class="step">
+            <strong>02</strong>
+            <h3>Design</h3>
+            <p>We plan the layout, pages, and visual direction.</p>
+          </div>
+          <div class="step">
+            <strong>03</strong>
+            <h3>Development</h3>
+            <p>We build and configure your WordPress website.</p>
+          </div>
+          <div class="step">
+            <strong>04</strong>
+            <h3>Review</h3>
+            <p>We test the website and prepare it for launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="background: #101010">
+      <div class="container center">
+        <span class="eyebrow">FAQ</span>
+        <h2>WordPress <span class="gold">Questions.</span></h2>
+        <div class="faq">
+          <div class="faq-item active">
+            <button type="button" aria-expanded="true">
+              What is WordPress?<span>+</span>
+            </button>
+            <div class="answer">
+              WordPress is a content management system that helps users create
+              and manage websites, blogs, and online stores.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false">
+              Can I manage my website myself?<span>+</span>
+            </button>
+            <div class="answer">
+              Yes. WordPress provides an administration dashboard where you can
+              manage supported pages, posts, media, and other website content.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false">
+              Can you build an online store with WordPress?<span>+</span>
+            </button>
+            <div class="answer">
+              Yes. WooCommerce can be used to build and manage an online store
+              on WordPress.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false">
+              Do I need hosting and a domain?<span>+</span>
+            </button>
+            <div class="answer">
+              A public self-hosted WordPress website generally needs a domain
+              name and web hosting. The exact setup depends on the project.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container cta">
+        <span class="eyebrow">START YOUR PROJECT</span>
+        <h2>
+          Ready for a Professional <span class="gold">WordPress Website?</span>
+        </h2>
+        <p>
+          Let's discuss your ideas and create a WordPress website that fits your
+          business needs.
+        </p>
+        <a href="contact.html" class="btn">Contact Our Team →</a>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <h3>JR <span>WEB AGENCY</span></h3>
+
+      <p>Your Vision | Our Web Solutions</p>
+
+      <p>
+        Email:
+        <a href="mailto:jrwebagency@gmail.com"> jrwebagency@gmail.com </a>
+      </p>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <p class="copyright">© 2026 JR Web Agency. All Rights Reserved.</p>
+    </footer>
+    <script>
+      document.querySelectorAll(".faq-item button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.parentElement;
+          const wasOpen = item.classList.contains("active");
+          document.querySelectorAll(".faq-item").forEach((el) => {
+            el.classList.remove("active");
+            el.querySelector("button").setAttribute("aria-expanded", "false");
+          });
+          if (!wasOpen) {
+            item.classList.add("active");
+            button.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+      /* =================================
+   MOBILE NAVBAR TOGGLE
+================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    if (isOpen) {
+        menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+    } else {
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+});
+
+// Close menu after clicking a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    });
+
+});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | JR Web Agency</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+:root {
+    --black: #090909;
+    --card: #141414;
+    --gold: #ffc928;
+    --white: #ffffff;
+    --gray: #a4a4a4;
+    --border: #262626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 100px 7%;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.section-title span {
+    color: var(--gold);
+}
+
+.section-description {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 650px;
+}
+
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background: var(--gold);
+    color: #090909;
+    font-size: 14px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.gold-btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.gold-btn span {
+    font-size: 19px;
+}
+
+/* =========================
+   1. HERO SECTION
+========================= */
+
+.about-hero {
+    min-height: 520px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 100px 7%;
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,.96) 0%,
+    rgba(0,0,0,.78) 50%,
+    rgba(0,0,0,.35) 100%),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800")
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    color: #c2c2c2;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 620px;
+    margin-bottom: 30px;
+}
+
+.hero-breadcrumb {
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.hero-breadcrumb span {
+    color: var(--gold);
+    margin: 0 10px;
+}
+
+/* =========================
+   2. OUR STORY
+========================= */
+
+.story-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.story-image {
+    position: relative;
+}
+
+.story-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.story-image::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    width: 100px;
+    height: 100px;
+    border-top: 3px solid var(--gold);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px 0 0 0;
+}
+
+.story-content h2 {
+    margin-bottom: 22px;
+}
+
+.story-content .section-description {
+    margin-bottom: 18px;
+}
+
+.story-highlight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 28px;
+    border-left: 3px solid var(--gold);
+    background: var(--card);
+}
+
+.story-highlight strong {
+    color: var(--gold);
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+}
+
+.story-highlight p {
+    color: #bbb;
+    font-size: 13px;
+}
+
+/* =========================
+   3. FOUNDER SECTION
+========================= */
+
+.founder-section {
+    background: #101010;
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 75px;
+    align-items: center;
+}
+
+.founder-image {
+    position: relative;
+    max-width: 430px;
+    margin: auto;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+.founder-image::after {
+    content: "";
+    position: absolute;
+    inset: 15px -15px -15px 15px;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.founder-image img {
+    position: relative;
+    z-index: 1;
+}
+
+.founder-content h2 {
+    margin-bottom: 10px;
+}
+
+.founder-role {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.founder-content .section-description {
+    margin-bottom: 18px;
+}
+
+.founder-quote {
+    margin-top: 28px;
+    padding: 25px;
+    background: #191919;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+}
+
+.founder-quote p {
+    color: #ddd;
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.founder-quote span {
+    color: var(--gold);
+    font-size: 24px;
+}
+
+/* =========================
+   4. MISSION AND VISION
+========================= */
+
+.mission-section {
+    text-align: center;
+}
+
+.mission-heading {
+    margin-bottom: 50px;
+}
+
+.mission-heading .section-description {
+    margin: 18px auto 0;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.mission-card {
+    padding: 38px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.mission-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-7px);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: rgba(255,201,40,.12);
+    color: var(--gold);
+    font-size: 26px;
+    border-radius: 10px;
+    margin-bottom: 23px;
+}
+
+.mission-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* =========================
+   5. CORE VALUES
+========================= */
+
+.values-section {
+    background: #101010;
+    text-align: center;
+}
+
+.values-heading {
+    margin-bottom: 50px;
+}
+
+.values-heading .section-description {
+    margin: 18px auto 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    text-align: left;
+}
+
+.value-card {
+    padding: 30px;
+    background: #171717;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.value-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-7px);
+}
+
+.value-number {
+    color: var(--gold);
+    font-family: 'Outfit', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================
+   6. OUR TEAM
+========================= */
+
+.team-section {
+    text-align: center;
+}
+
+.team-heading {
+    margin-bottom: 45px;
+}
+
+.team-heading .section-description {
+    margin: 18px auto 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.team-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.team-card img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(.9);
+    transition: .4s;
+}
+
+.team-card:hover img {
+    filter: brightness(1);
+}
+
+.team-info {
+    padding: 23px;
+}
+
+.team-info h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.team-info span {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.team-info p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 13px;
+}
+
+/* =========================
+   7. WORK APPROACH
+========================= */
+
+.approach-section {
+    background: #101010;
+    text-align: center;
+}
+
+.approach-heading {
+    margin-bottom: 50px;
+}
+
+.approach-heading .section-description {
+    margin: 18px auto 0;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.approach-card {
+    padding: 28px 18px;
+    background: #181818;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.approach-card .number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 17px;
+}
+
+.approach-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.approach-card p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   8. CTA SECTION
+========================= */
+
+.about-cta {
+    padding: 90px 7%;
+    text-align: center;
+}
+
+.cta-inner {
+    max-width: 900px;
+    margin: auto;
+    padding: 65px 35px;
+    background:
+    linear-gradient(rgba(10,10,10,.91),rgba(10,10,10,.94)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200")
+    center/cover;
+    border: 1px solid #40351c;
+    border-radius: 15px;
+}
+
+.cta-inner h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 18px;
+}
+
+.cta-inner h2 span {
+    color: var(--gold);
+}
+
+.cta-inner p {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 28px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width: 900px) {
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .story-section,
+    .founder-grid {
+        gap: 40px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-card img {
+        height: 260px;
+    }
+
+}
+
+@media(max-width: 650px) {
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .about-hero {
+        min-height: 480px;
+        padding: 80px 6%;
+        background-position: center;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .story-section,
+    .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-image img {
+        height: 330px;
+    }
+
+    .founder-image {
+        max-width: 350px;
+    }
+
+    .founder-image img {
+        height: 400px;
+    }
+
+    .mission-grid,
+    .values-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-card,
+    .value-card {
+        padding: 27px;
+    }
+
+    .team-card img {
+        height: 320px;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .approach-card {
+        padding: 22px 12px;
+    }
+
+    .approach-card h3 {
+        font-size: 15px;
+    }
+
+    .approach-card p {
+        font-size: 12px;
+    }
+
+    .about-cta {
+        padding: 60px 6%;
+    }
+
+    .cta-inner {
+        padding: 45px 22px;
+    }
+
+}
+
+@media(max-width: 380px) {
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 78px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: rgba(8, 9, 11, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.brand-jr {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.brand .web{
+    color: white;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+    color: white;
+}
+
+.navbar nav .nav-cta {
+    color: #090909;
+    background: var(--gold);
+    padding: 10px 17px;
+    border-radius: 6px;
+    font-weight: 800;
+}
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    background: #08090B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-jr {
+    color: #ffc928;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* DESKTOP NAVIGATION */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc928;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffc928;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: static; /* Important: overlay khatam */
+
+        width: 100%;
+        background: #11163f;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+/* DESKTOP: HAMBURGER ALWAYS HIDDEN */
+@media (min-width: 769px) {
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+}
+
+/* MOBILE MENU FIX */
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none !important;
+        width: 100%;
+        position: static;
+        flex-direction: column;
+        background: #11163f;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-jr">JR</span>
+        <span>WEB AGENCY</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+         <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+       <a href="https://ranasalmanali3535.github.io/ranasalmanali_portfolio/">Portfolio</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+<!-- 1. HERO SECTION -->
+
+<section class="about-hero">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">ABOUT JR WEB AGENCY</span>
+
+        <h1>
+            Building Digital
+            <span>Experiences.</span>
+            Creating Opportunities.
+        </h1>
+
+        <p>
+            We are a creative digital agency dedicated to
+            transforming ideas into modern, meaningful and
+            impactful digital experiences.
+        </p>
+
+        <a href="#our-story" class="gold-btn">
+            Explore Our Story <span>→</span>
+        </a>
+
+        <div class="hero-breadcrumb">
+            Home <span>/</span> About Us
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 2. OUR STORY -->
+
+<section class="section">
+
+    <div class="container story-section" id="our-story">
+
+        <div class="story-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1000"
+                alt="Creative agency collaboration">
+
+        </div>
+
+        <div class="story-content">
+
+            <span class="eyebrow">HOW IT ALL STARTED</span>
+
+            <h2 class="section-title">
+                Every Great Idea Begins
+                With a <span>Vision.</span>
+            </h2>
+
+            <p class="section-description">
+                JR Web Agency was founded with a simple vision:
+                to turn creative ideas into powerful digital solutions.
+            </p>
+
+            <p class="section-description">
+                We believe that a strong online presence is essential
+                for every modern business. That's why we focus on
+                creating websites and digital experiences that
+                combine attractive design, reliable technology,
+                and excellent user experience.
+            </p>
+
+            <p class="section-description">
+                From website development to e-commerce solutions,
+                our approach is built around understanding business
+                goals and delivering solutions that make a difference.
+            </p>
+
+            <div class="story-highlight">
+                <strong>JR</strong>
+                <p>
+                    Your Vision | Our Web Solutions
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 3. FOUNDER SECTION -->
+
+<section class="section founder-section">
+
+    <div class="container founder-grid">
+
+        <div class="founder-image">
+
+            <!-- Replace with your actual founder photo -->
+
+            <img
+                src="salman.png"
+                alt="Rana Salman Ali - Founder of JR Web Agency">
+
+        </div>
+
+        <div class="founder-content">
+
+            <span class="eyebrow">THE PERSON BEHIND THE VISION</span>
+
+            <h2 class="section-title">
+                Meet the <span>Founder.</span>
+            </h2>
+
+            <h3 style="font-size:23px; margin-top:15px;">
+                Rana Salman Ali
+            </h3>
+
+            <span class="founder-role">
+                Founder & CEO – JR Web Agency
+            </span>
+
+            <p class="section-description">
+                JR Web Agency was founded by Rana Salman Ali
+                with a passion for software development,
+                digital creativity, and technology.
+            </p>
+
+            <p class="section-description">
+                His vision is to build a digital agency that
+                helps individuals, startups, and businesses
+                transform their ideas into professional
+                online experiences.
+            </p>
+
+            <p class="section-description">
+                With an interest in modern web technologies,
+                creative problem-solving, and continuous
+                innovation, he aims to make quality digital
+                solutions accessible to businesses of
+                different sizes.
+            </p>
+
+            <div class="founder-quote">
+
+                <span>"</span>
+
+                <p>
+                    Great digital experiences are not just
+                    about how things look; they are about
+                    how effectively they solve problems
+                    and create opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 4. MISSION AND VISION -->
+
+<section class="section mission-section">
+
+    <div class="container">
+
+        <div class="mission-heading">
+
+            <span class="eyebrow">WHAT DRIVES US</span>
+
+            <h2 class="section-title">
+                Our Mission & <span>Vision.</span>
+            </h2>
+
+            <p class="section-description">
+                Our purpose and direction guide everything
+                we create and every solution we deliver.
+            </p>
+
+        </div>
+
+        <div class="mission-grid">
+
+            <div class="mission-card">
+
+                <div class="card-icon">◎</div>
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To empower businesses with creative,
+                    modern, and reliable digital solutions
+                    that strengthen their online presence
+                    and support their growth.
+                </p>
+
+            </div>
+
+            <div class="mission-card">
+
+                <div class="card-icon">✦</div>
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    To become a trusted digital agency
+                    recognized for creativity, innovation,
+                    quality, and meaningful digital experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 5. CORE VALUES -->
+
+<section class="section values-section">
+
+    <div class="container">
+
+        <div class="values-heading">
+
+            <span class="eyebrow">WHAT WE BELIEVE IN</span>
+
+            <h2 class="section-title">
+                The Values Behind <span>Everything.</span>
+            </h2>
+
+            <p class="section-description">
+                Our values shape our work, our relationships,
+                and the digital experiences we create.
+            </p>
+
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+                <div class="value-number">01</div>
+                <h3>Creativity</h3>
+                <p>
+                    We believe in fresh ideas, innovative thinking,
+                    and designs that make every digital experience unique.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-number">02</div>
+                <h3>Quality</h3>
+                <p>
+                    We focus on delivering reliable solutions with
+                    attention to detail, performance, and user experience.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-number">03</div>
+                <h3>Innovation</h3>
+                <p>
+                    We continuously explore modern technologies
+                    and new approaches to solve digital challenges.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-number">04</div>
+                <h3>Transparency</h3>
+                <p>
+                    We value honest communication, clear expectations,
+                    and strong professional relationships.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-number">05</div>
+                <h3>Client Satisfaction</h3>
+                <p>
+                    Understanding client requirements and delivering
+                    meaningful results remain central to our approach.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-number">06</div>
+                <h3>Continuous Growth</h3>
+                <p>
+                    We believe learning and improving every day
+                    is the foundation of long-term success.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 6. OUR TEAM -->
+
+<section class="section team-section">
+
+    <div class="container">
+
+        <div class="team-heading">
+
+            <span class="eyebrow">THE PEOPLE BEHIND THE WORK</span>
+
+            <h2 class="section-title">
+                Meet Our <span>Creative Team.</span>
+            </h2>
+
+            <p class="section-description">
+                Great digital solutions require creative thinking,
+                technical knowledge, and collaboration.
+                We bring together different skills to transform
+                ideas into digital experiences.
+            </p>
+
+        </div>
+
+        <div class="team-grid">
+
+            <!-- TEAM MEMBER 1 -->
+
+            <div class="team-card">
+
+                <img
+                    src="rehan.png"
+                    alt="Team member">
+
+                <div class="team-info">
+                    <h3>Rehan Ali</h3>
+                    <span>Web Developer</span>
+                    <p>
+                        Focused on building functional,
+                        responsive, and modern websites.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- TEAM MEMBER 2 -->
+
+            <div class="team-card">
+
+                <img
+                    src="alex.png"
+                    alt="Team member">
+
+                <div class="team-info">
+                    <h3>Alex</h3>
+                    <span>UI/UX Designer</span>
+                    <p>
+                        Focused on creating intuitive,
+                        attractive, and user-friendly interfaces.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- TEAM MEMBER 3 -->
+
+            <div class="team-card">
+
+                <img
+                    src="farhan.png"
+                    alt="Team member">
+
+                <div class="team-info">
+                    <h3>Farhan Khilji</h3>
+                    <span>Digital Solutions</span>
+                    <p>
+                        Focused on exploring digital tools
+                        and effective technology solutions.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 7. OUR WORKING APPROACH -->
+
+<section class="section approach-section">
+
+    <div class="container">
+
+        <div class="approach-heading">
+
+            <span class="eyebrow">HOW WE WORK</span>
+
+            <h2 class="section-title">
+                From Ideas to <span>Reality.</span>
+            </h2>
+
+            <p class="section-description">
+                Every successful project starts with a clear
+                process and a shared understanding of goals.
+            </p>
+
+        </div>
+
+        <div class="approach-grid">
+
+            <div class="approach-card">
+                <div class="number">01</div>
+                <h3>Discovery</h3>
+                <p>
+                    Understanding your business,
+                    goals, and requirements.
+                </p>
+            </div>
+
+            <div class="approach-card">
+                <div class="number">02</div>
+                <h3>Planning</h3>
+                <p>
+                    Creating a clear strategy
+                    and project roadmap.
+                </p>
+            </div>
+
+            <div class="approach-card">
+                <div class="number">03</div>
+                <h3>Development</h3>
+                <p>
+                    Turning ideas into functional
+                    and modern digital solutions.
+                </p>
+            </div>
+
+            <div class="approach-card">
+                <div class="number">04</div>
+                <h3>Delivery</h3>
+                <p>
+                    Testing, refining, and
+                    delivering the final project.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 8. FINAL CTA -->
+
+<section class="about-cta" id="contact">
+
+    <div class="cta-inner">
+
+        <span class="eyebrow">LET'S BUILD SOMETHING GREAT</span>
+
+        <h2>
+            Have an Idea?
+            <span>Let's Make It Happen.</span>
+        </h2>
+
+        <p>
+            Whether you're starting a new business or
+            improving your digital presence, we're ready
+            to help turn your vision into reality.
+        </p>
+
+        <a href="contact.html" class="gold-btn">
+            Start Your Project <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+<script>
+    /* =================================
+   MOBILE NAVBAR TOGGLE
+================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    if (isOpen) {
+        menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+    } else {
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+});
+
+// Close menu after clicking a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    });
+
+});
+</script>
+
+</body>
+</html>

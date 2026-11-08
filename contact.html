@@ -1,0 +1,1529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | JR Web Agency</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+:root {
+    --black: #090909;
+    --card: #141414;
+    --gold: #ffc928;
+    --white: #ffffff;
+    --gray: #a4a4a4;
+    --border: #292929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+   
+}
+
+.section {
+    padding: 90px 7%;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+}
+
+.section-title span {
+    color: var(--gold);
+}
+
+.description {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: var(--gold);
+    color: #090909;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gold-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   1. HERO SECTION
+========================= */
+
+.contact-hero {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 90px 7%;
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,.96),
+    rgba(0,0,0,.68)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800")
+    center/cover no-repeat;
+    padding-top: 100px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(43px, 6vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    color: #c0c0c0;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+.breadcrumb {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.breadcrumb span {
+    color: var(--gold);
+    margin: 0 10px;
+}
+
+/* =========================
+   2. CONTACT INFO
+========================= */
+
+.contact-info-section {
+    padding: 75px 7% 40px;
+}
+
+.contact-info-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.contact-info-heading p {
+    max-width: 600px;
+    margin: 15px auto 0;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.info-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.info-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+}
+
+.info-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: rgba(255,201,40,.12);
+    color: var(--gold);
+    font-size: 25px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+}
+
+.info-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.info-card a {
+    color: var(--gold);
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   3. CONTACT FORM
+========================= */
+
+.contact-form-section {
+    padding: 70px 7% 100px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.contact-left h2 {
+    margin-bottom: 20px;
+}
+
+.contact-left .description {
+    margin-bottom: 25px;
+}
+
+.contact-points {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-point {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.point-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    background: #191919;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.contact-point h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contact-point p {
+    color: var(--gray);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-form {
+    padding: 38px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.contact-form h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.contact-form > p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px 15px;
+    background: #0b0b0b;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--gold);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #777;
+}
+
+.form-group textarea {
+    height: 135px;
+    resize: vertical;
+}
+
+.form-group select option {
+    background: #141414;
+}
+
+.submit-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--gold);
+}
+
+/* =========================
+   4. WHATSAPP CTA
+========================= */
+
+.whatsapp-section {
+    padding: 0 7% 90px;
+}
+
+.whatsapp-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 38px;
+    background: #141414;
+    border: 1px solid #282828;
+    border-radius: 12px;
+}
+
+.whatsapp-box h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.whatsapp-box h2 span {
+    color: var(--gold);
+}
+
+.whatsapp-box p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================
+   5. LOCATION SECTION
+========================= */
+
+.location-section {
+    padding: 80px 7%;
+    background: #101010;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.location-content p {
+    margin-top: 15px;
+}
+
+.map-box {
+    min-height: 300px;
+    background: #191919;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.map-box h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.map-box p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* =========================
+   6. FAQ SECTION
+========================= */
+
+.faq-section {
+    text-align: center;
+}
+
+.faq-heading {
+    margin-bottom: 40px;
+}
+
+.faq-heading p {
+    margin: 15px auto 0;
+    max-width: 600px;
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 21px;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.faq-question span {
+    color: var(--gold);
+    font-size: 22px;
+    transition: .3s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 21px 21px;
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   7. FINAL CTA
+========================= */
+
+.contact-cta {
+    padding: 30px 7% 100px;
+}
+
+.cta-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 65px 30px;
+    text-align: center;
+    background:
+    linear-gradient(rgba(0,0,0,.90),rgba(0,0,0,.92)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200")
+    center/cover;
+    border: 1px solid #40351c;
+    border-radius: 12px;
+}
+
+.cta-inner h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 15px;
+}
+
+.cta-inner h2 span {
+    color: var(--gold);
+}
+
+.cta-inner p {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 900px) {
+
+    .section {
+        padding: 75px 5%;
+    }
+
+    .contact-grid {
+        gap: 35px;
+    }
+
+    .contact-info-grid {
+        gap: 15px;
+    }
+
+    .info-card {
+        padding: 23px;
+    }
+
+}
+
+@media(max-width: 650px) {
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .contact-hero {
+        min-height: 400px;
+        padding: 70px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .contact-info-section {
+        padding: 60px 6% 25px;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-section {
+        padding: 50px 6% 70px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .whatsapp-section {
+        padding: 0 6% 65px;
+    }
+
+    .whatsapp-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 22px;
+    }
+
+    .location-section {
+        padding: 65px 6%;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .map-box {
+        min-height: 240px;
+    }
+
+    .faq-section {
+        padding: 65px 6%;
+    }
+
+    .faq-question {
+        font-size: 14px;
+    }
+
+    .contact-cta {
+        padding: 20px 6% 70px;
+    }
+
+    .cta-inner {
+        padding: 45px 20px;
+    }
+
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+      .site-header {
+    min-height: 80px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #090909;
+    border-bottom: 1px solid #292929;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+.logo {
+    color: #ffc928;
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span,
+.site-footer h3 span {
+    color: white;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.site-header nav a,
+.footer-links a {
+    color: #ddd;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.site-header nav a:hover,
+.footer-links a:hover {
+    color: #ffc928;
+}
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    background: #08090B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-jr {
+    color: #ffc928;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* DESKTOP NAVIGATION */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc928;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffc928;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: static; /* Important: overlay khatam */
+
+        width: 100%;
+        background: #11163f;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+/* DESKTOP: HAMBURGER ALWAYS HIDDEN */
+@media (min-width: 769px) {
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+}
+
+/* MOBILE MENU FIX */
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none !important;
+        width: 100%;
+        position: static;
+        flex-direction: column;
+        background: #11163f;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-jr">JR</span>
+        <span>WEB AGENCY</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+         <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+       <a href="https://ranasalmanali3535.github.io/ranasalmanali_portfolio/">Portfolio</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+<!-- 1. HERO SECTION -->
+
+<section class="contact-hero">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">GET IN TOUCH</span>
+
+        <h1>
+            Let's Start a
+            <span>Conversation.</span>
+        </h1>
+
+        <p>
+            Have a project in mind or need help with your
+            digital presence? We'd love to hear from you.
+            Let's discuss how we can bring your ideas to life.
+        </p>
+
+        <a href="#contact-form" class="gold-btn">
+            Contact Our Team →
+        </a>
+
+        <div class="breadcrumb">
+            Home <span>/</span> Contact Us
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 2. CONTACT INFORMATION -->
+
+<section class="contact-info-section">
+
+    <div class="container">
+
+        <div class="contact-info-heading">
+
+            <span class="eyebrow">CONTACT INFORMATION</span>
+
+            <h2 class="section-title">
+                We'd Love to <span>Hear From You.</span>
+            </h2>
+
+            <p class="description">
+                Choose your preferred way to contact us.
+                Our team is ready to discuss your next project.
+            </p>
+
+        </div>
+
+        <div class="contact-info-grid">
+
+            <div class="info-card">
+
+                <div class="info-icon">✉</div>
+
+                <h3>Email Us</h3>
+
+                <p>
+                    Send us an email for project inquiries
+                    and business-related questions.
+                </p>
+
+                <a href="mailto:jrwebagency@gmail.com">
+                    jrwebagency@gmail.com
+                </a>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info-icon">☎</div>
+
+                <h3>Call Us</h3>
+
+                <p>
+                    Have questions? Contact us directly
+                    to discuss your requirements.
+                </p>
+
+                <a href="tel:+923073322813">
+                    +92 3073322813
+                </a>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info-icon">⌖</div>
+
+                <h3>Our Location</h3>
+
+                <p>
+                    We are based in Pakistan and
+                    welcome project inquiries from
+                    clients around the world.
+                </p>
+
+                <a href="#location">
+                    Pakistan
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 3. CONTACT FORM -->
+
+<section class="contact-form-section" id="contact-form">
+
+    <div class="container contact-grid">
+
+        <div class="contact-left">
+
+            <span class="eyebrow">LET'S TALK BUSINESS</span>
+
+            <h2 class="section-title">
+                Tell Us About Your
+                <span>Project.</span>
+            </h2>
+
+            <p class="description">
+                Every great project starts with a conversation.
+                Share your ideas, goals, and requirements with us.
+                We'll be happy to explore how we can help.
+            </p>
+
+            <div class="contact-points">
+
+                <div class="contact-point">
+
+                    <div class="point-icon">✉</div>
+
+                    <div>
+                        <h4>Email Address</h4>
+                        <p>jrwebagency@gmail.com</p>
+                    </div>
+
+                </div>
+
+                <div class="contact-point">
+
+                    <div class="point-icon">◷</div>
+
+                    <div>
+                        <h4>Response Time</h4>
+                        <p>We'll respond as soon as possible.</p>
+                    </div>
+
+                </div>
+
+                <div class="contact-point">
+
+                    <div class="point-icon">✦</div>
+
+                    <div>
+                        <h4>Our Commitment</h4>
+                        <p>Professional communication and support.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form class="contact-form" id="jrContactForm">
+
+            <h3>Send Us a Message</h3>
+
+            <p>
+                Fill out the form below and tell us
+                how we can help you.
+            </p>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your full name"
+                        autocomplete="name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        autocomplete="email"
+                        required>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+92 300 1234567"
+                        autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+
+                    <label for="service">Select Service *</label>
+
+                    <select id="service" name="service" required>
+
+                        <option value="">Choose a service</option>
+                        <option>Website Development</option>
+                        <option>WordPress Development</option>
+                        <option>E-Commerce Development</option>
+                        <option>UI/UX Design</option>
+                        <option>SEO Services</option>
+                        <option>AI Solutions</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="subject">Subject *</label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="What is your project about?"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="message">Your Message *</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your project..."
+                    required></textarea>
+
+            </div>
+
+            <button type="submit" class="gold-btn submit-btn">
+                Send Message →
+            </button>
+
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- 4. WHATSAPP CTA -->
+
+<section class="whatsapp-section">
+
+    <div class="container">
+
+        <div class="whatsapp-box">
+
+            <div>
+
+                <h2>
+                    Prefer <span>WhatsApp?</span>
+                </h2>
+
+                <p>
+                    Have a quick question? Connect with us
+                    through WhatsApp for a direct conversation.
+                </p>
+
+            </div>
+
+            <a
+                href="https://wa.me/923073322813"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="gold-btn">
+
+                Chat on WhatsApp →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 5. LOCATION -->
+
+<section class="location-section" id="location">
+
+    <div class="container location-content">
+
+        <div>
+
+            <span class="eyebrow">OUR LOCATION</span>
+
+            <h2 class="section-title">
+                Connecting With Clients
+                <span>Worldwide.</span>
+            </h2>
+
+            <p class="description">
+                Based in Pakistan, JR Web Agency aims to
+                work with individuals, startups, and businesses
+                from different parts of the world.
+            </p>
+
+        </div>
+
+        <div class="map-box">
+
+            <div>
+                <div class="info-icon" style="margin: 0 auto 18px;">
+                    ⌖
+                </div>
+
+                <h3>JR Web Agency</h3>
+
+                <p>Pakistan | Serving Clients Worldwide</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 6. FAQ -->
+
+<section class="section faq-section">
+
+    <div class="container">
+
+        <div class="faq-heading">
+
+            <span class="eyebrow">HAVE QUESTIONS?</span>
+
+            <h2 class="section-title">
+                Frequently Asked <span>Questions.</span>
+            </h2>
+
+            <p class="description">
+                Here are answers to some common questions
+                about contacting and working with our agency.
+            </p>
+
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item active">
+
+                <button class="faq-question" type="button"
+                    aria-expanded="true">
+                    How can I start a project with JR Web Agency?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    You can contact us through our contact form,
+                    email, or WhatsApp. Share your project
+                    requirements and we can discuss the next steps.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button"
+                    aria-expanded="false">
+                    What services do you provide?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Our services include website development,
+                    WordPress development, e-commerce solutions,
+                    UI/UX design, and digital technology solutions.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button"
+                    aria-expanded="false">
+                    Do you work with international clients?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Yes, we welcome inquiries from clients
+                    worldwide and can discuss project requirements
+                    through online communication.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button"
+                    aria-expanded="false">
+                    How long does a website project take?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Project timelines depend on the website's
+                    features, complexity, and requirements.
+                    We discuss the estimated timeline before starting.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button"
+                    aria-expanded="false">
+                    How can I get a project quotation?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Send us your project details using the contact
+                    form. We can review your requirements and
+                    discuss an appropriate quotation.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 7. FINAL CTA -->
+
+<section class="contact-cta">
+
+    <div class="cta-inner">
+
+        <span class="eyebrow">YOUR NEXT PROJECT STARTS HERE</span>
+
+        <h2>
+            Let's Build Something
+            <span>Amazing Together.</span>
+        </h2>
+
+        <p>
+            Have an idea worth bringing to life?
+            Let's turn your vision into a digital experience
+            that makes an impact.
+        </p>
+
+        <a href="mailto:jrwebagency@gmail.com" class="gold-btn">
+            Get In Touch →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- JAVASCRIPT -->
+
+
+<!-- EMAILJS SDK - LOAD FIRST -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+
+<script>
+
+// ===================================
+// INITIALIZE EMAILJS
+// ===================================
+
+emailjs.init({
+    publicKey: "8cYutNGzDWkvOhNMc"
+});
+
+
+// ===================================
+// FAQ ACCORDION
+// ===================================
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+
+        const isOpen = item.classList.contains('active');
+
+        faqItems.forEach(faq => {
+            faq.classList.remove('active');
+
+            faq.querySelector('.faq-question')
+                .setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+            item.classList.add('active');
+
+            question.setAttribute('aria-expanded', 'true');
+        }
+
+    });
+
+});
+
+
+// ===================================
+// CONTACT FORM - EMAILJS
+// ===================================
+
+const contactForm = document.getElementById('jrContactForm');
+
+const formStatus = document.getElementById('formStatus');
+
+if (contactForm) {
+
+    contactForm.addEventListener('submit', async function(e) {
+
+        // Stop page reload
+        e.preventDefault();
+
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        // Loading state
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        formStatus.textContent = '';
+
+        try {
+
+            // Send email
+            const response = await emailjs.sendForm(
+                'service_mud9doc',
+                'template_y63062f',
+                contactForm
+            );
+
+            console.log('Email sent:', response);
+
+            formStatus.textContent =
+                'Message sent successfully! We will contact you soon.';
+
+            contactForm.reset();
+
+        } catch (error) {
+
+    console.error("EmailJS Error:", error);
+
+    console.log("Error Status:", error.status);
+    console.log("Error Message:", error.text);
+
+    formStatus.textContent =
+        "Email Error: " + (error.text || "Please check Console.");
+
+} finally {
+
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message →';
+
+        }
+
+    });
+
+}
+
+/* =================================
+   MOBILE NAVBAR TOGGLE
+================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    if (isOpen) {
+        menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+    } else {
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+});
+
+// Close menu after clicking a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+

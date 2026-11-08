@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terms & Conditions | JR Web Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #090909;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+/* Hero */
+
+.terms-hero {
+  padding: 100px 7% 85px;
+  text-align: center;
+  background: radial-gradient(circle at top, #252014, #090909 65%);
+  border-bottom: 1px solid #292929;
+}
+
+.terms-tag {
+  color: #ffc928;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.terms-hero h1 {
+  font-size: clamp(35px, 5vw, 55px);
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.terms-hero h1 span {
+  color: #ffc928;
+}
+
+.terms-hero p {
+  color: #999;
+  font-size: 14px;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.9;
+}
+
+.terms-date {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 9px 17px;
+  background: #191919;
+  border: 1px solid #333;
+  border-radius: 30px;
+  color: #ffc928;
+  font-size: 11px;
+}
+
+/* Main Content */
+
+.terms-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 75px 25px;
+}
+
+.terms-intro {
+  background: #141414;
+  border: 1px solid #292929;
+  border-left: 3px solid #ffc928;
+  padding: 28px;
+  border-radius: 8px;
+  margin-bottom: 45px;
+}
+
+.terms-intro p {
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Sections */
+
+.terms-block {
+  padding: 30px 0;
+  border-bottom: 1px solid #252525;
+}
+
+.terms-block h2 {
+  color: #fff;
+  font-size: 21px;
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.terms-block h2 span {
+  color: #ffc928;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.terms-block p {
+  color: #999;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 13px;
+}
+
+.terms-block ul {
+  padding-left: 22px;
+  margin: 15px 0;
+}
+
+.terms-block li {
+  color: #999;
+  font-size: 13px;
+  line-height: 2;
+  padding-left: 5px;
+  margin-bottom: 7px;
+}
+
+.terms-block li::marker {
+  color: #ffc928;
+}
+
+.terms-block strong {
+  color: #ddd;
+  font-weight: 600;
+}
+
+/* Contact Box */
+
+.terms-contact {
+  margin-top: 50px;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(130deg, #201c10, #121212);
+  border: 1px solid #40351b;
+  border-radius: 12px;
+}
+
+.terms-contact h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.terms-contact h2 span {
+  color: #ffc928;
+}
+
+.terms-contact p {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 23px;
+}
+
+.terms-contact a {
+  display: inline-block;
+  background: #ffc928;
+  color: #090909;
+  text-decoration: none;
+  padding: 13px 25px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.terms-contact a:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width: 600px) {
+  .terms-hero {
+    padding: 75px 6% 65px;
+  }
+
+  .terms-wrapper {
+    padding: 45px 6%;
+  }
+
+  .terms-block h2 {
+    font-size: 18px;
+  }
+
+  .terms-intro {
+    padding: 22px;
+  }
+
+  .terms-contact {
+    padding: 30px 20px;
+  }
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 78px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: rgba(8, 9, 11, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.brand-jr {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+    color: white;
+}
+
+.navbar nav .nav-cta {
+    color: #090909;
+    background: var(--gold);
+    padding: 10px 17px;
+    border-radius: 6px;
+    font-weight: 800;
+}
+</style>
+</head>
+
+<body>
+   
+
+<!-- Hero -->
+
+<section class="terms-hero">
+
+  <span class="terms-tag">LEGAL INFORMATION</span>
+
+  <h1>Terms & <span>Conditions</span></h1>
+
+  <p>
+    Please read these terms and conditions carefully
+    before using JR Web Agency's website or engaging
+    with our digital services.
+  </p>
+
+  <span class="terms-date">
+    <a href="index.html">
+      Return to Home
+    </a>
+  </span>
+
+</section>
+
+
+<!-- Main Content -->
+
+<main class="terms-wrapper">
+
+  <div class="terms-intro">
+    <p>
+      Welcome to JR Web Agency. These Terms and Conditions
+      govern your access to and use of our website and
+      services. By visiting our website, contacting us,
+      or engaging our services, you agree to these terms
+      to the extent applicable. If you do not agree,
+      please discontinue use of our website and services.
+    </p>
+  </div>
+
+
+  <!-- 01 -->
+
+  <section class="terms-block">
+    <h2><span>01.</span> Acceptance of Terms</h2>
+
+    <p>
+      By accessing or using the JR Web Agency website,
+      you acknowledge that you have read, understood
+      and agree to these Terms and Conditions.
+    </p>
+
+    <p>
+      These terms apply to visitors, prospective clients
+      and clients using our website or services.
+    </p>
+  </section>
+
+
+  <!-- 02 -->
+
+  <section class="terms-block">
+    <h2><span>02.</span> Our Services</h2>
+
+    <p>
+      JR Web Agency provides digital and web-related
+      services, which may include:
+    </p>
+
+    <ul>
+      <li>Website Design and Development.</li>
+      <li>WordPress Development.</li>
+      <li>E-Commerce Website Development.</li>
+      <li>UI/UX Design.</li>
+      <li>Website Redesign and Optimization.</li>
+      <li>AI and Digital Solutions.</li>
+    </ul>
+
+    <p>
+      The availability, scope and specifications of
+      services depend on individual project agreements.
+    </p>
+  </section>
+
+
+  <!-- 03 -->
+
+  <section class="terms-block">
+    <h2><span>03.</span> Project Agreements</h2>
+
+    <p>
+      Before starting a project, the client and JR Web
+      Agency should agree on the project requirements,
+      deliverables, timeline and applicable fees.
+    </p>
+
+    <p>
+      Important project details may be documented
+      through written proposals, quotations, emails
+      or separate service agreements.
+    </p>
+
+    <p>
+      In case of any conflict, the applicable signed
+      or otherwise agreed project-specific terms
+      will govern that project to the extent of the conflict.
+    </p>
+  </section>
+
+
+  <!-- 04 -->
+
+  <section class="terms-block">
+    <h2><span>04.</span> Pricing and Payments</h2>
+
+    <p>
+      Project prices are determined according to
+      the requirements, complexity and scope of
+      each individual project.
+    </p>
+
+    <ul>
+      <li>Prices will be communicated before project commencement.</li>
+      <li>Any advance payments or milestones will be agreed in writing.</li>
+      <li>Additional features or scope changes may involve extra charges.</li>
+      <li>Third-party costs, such as hosting, domains or paid licenses, will be clarified separately.</li>
+    </ul>
+
+    <p>
+      Payment schedules, applicable taxes and refund
+      conditions should be specified in the relevant
+      project agreement or quotation.
+    </p>
+  </section>
+
+
+  <!-- 05 -->
+
+  <section class="terms-block">
+    <h2><span>05.</span> Revisions and Project Changes</h2>
+
+    <p>
+      Clients may request reasonable revisions
+      according to the revision limits agreed
+      for their project.
+    </p>
+
+    <p>
+      Major changes, new features or requests outside
+      the original scope may require additional time
+      and payment.
+    </p>
+
+    <p>
+      Any additional work should be discussed and
+      approved before implementation.
+    </p>
+  </section>
+
+
+  <!-- 06 -->
+
+  <section class="terms-block">
+    <h2><span>06.</span> Client Responsibilities</h2>
+
+    <p>
+      Clients are responsible for providing accurate
+      information and materials required for their projects.
+    </p>
+
+    <ul>
+      <li>Providing necessary content, images and branding materials.</li>
+      <li>Reviewing designs and providing feedback in a timely manner.</li>
+      <li>Ensuring they have permission to use supplied content.</li>
+      <li>Providing required access to relevant platforms when necessary.</li>
+      <li>Making agreed payments according to the project schedule.</li>
+    </ul>
+
+    <p>
+      Delays in providing information or approvals
+      may affect the project delivery timeline.
+    </p>
+  </section>
+
+
+  <!-- 07 -->
+
+  <section class="terms-block">
+    <h2><span>07.</span> Intellectual Property Rights</h2>
+
+    <p>
+      Ownership and usage rights for project deliverables
+      will be determined by the applicable project agreement.
+    </p>
+
+    <ul>
+      <li>Clients must have appropriate rights to materials they provide.</li>
+      <li>Third-party themes, plugins, fonts and software remain subject to their respective licenses.</li>
+      <li>Ownership transfer of custom deliverables, where agreed, will follow the project agreement and applicable payment conditions.</li>
+      <li>JR Web Agency retains rights to its pre-existing tools, reusable components and internal materials.</li>
+    </ul>
+  </section>
+
+
+  <!-- 08 -->
+
+  <section class="terms-block">
+    <h2><span>08.</span> Website Delivery and Launch</h2>
+
+    <p>
+      Website delivery timelines will be communicated
+      and agreed upon before development begins.
+    </p>
+
+    <p>
+      The client is responsible for reviewing and
+      approving the final deliverables. Domain
+      registration, hosting and third-party services
+      may be separate from development fees.
+    </p>
+
+    <p>
+      Delays caused by external providers, missing
+      client materials or circumstances beyond
+      reasonable control may affect delivery.
+    </p>
+  </section>
+
+
+  <!-- 09 -->
+
+  <section class="terms-block">
+    <h2><span>09.</span> Maintenance and Support</h2>
+
+    <p>
+      Website maintenance and technical support
+      may be offered separately or included in
+      a project package where expressly agreed.
+    </p>
+
+    <p>
+      Support coverage, duration, response times
+      and maintenance charges will be determined
+      by the applicable agreement.
+    </p>
+  </section>
+
+
+  <!-- 10 -->
+
+  <section class="terms-block">
+    <h2><span>10.</span> Limitation of Liability</h2>
+
+    <p>
+      JR Web Agency will make reasonable efforts
+      to provide reliable digital services.
+      However, we do not guarantee uninterrupted
+      availability or error-free operation of
+      websites and third-party platforms.
+    </p>
+
+    <p>
+      To the extent permitted by applicable law,
+      JR Web Agency will not be responsible for
+      indirect or consequential losses arising
+      from the use of our website or services.
+    </p>
+
+    <p>
+      Nothing in these terms excludes liability
+      that cannot legally be excluded under
+      applicable law.
+    </p>
+  </section>
+
+
+  <!-- 11 -->
+
+  <section class="terms-block">
+    <h2><span>11.</span> Termination of Services</h2>
+
+    <p>
+      Either party may request termination of
+      a project in accordance with the applicable
+      project agreement.
+    </p>
+
+    <p>
+      Outstanding payments, completed work,
+      project materials and any applicable
+      cancellation or refund arrangements will
+      be handled according to the agreed terms
+      and applicable law.
+    </p>
+  </section>
+
+
+  <!-- 12 -->
+
+  <section class="terms-block">
+    <h2><span>12.</span> Website Usage</h2>
+
+    <p>
+      Visitors agree not to misuse our website
+      or attempt to interfere with its security
+      and functionality.
+    </p>
+
+    <ul>
+      <li>Do not attempt unauthorized access to website systems.</li>
+      <li>Do not submit unlawful, harmful or misleading content.</li>
+      <li>Do not copy or reproduce website content without permission.</li>
+      <li>Do not use our website for fraudulent or unlawful activities.</li>
+    </ul>
+  </section>
+
+
+  <!-- 13 -->
+
+  <section class="terms-block">
+    <h2><span>13.</span> Governing Law</h2>
+
+    <p>
+      These terms are intended to be interpreted
+      in accordance with applicable laws of Pakistan,
+      subject to any mandatory legal requirements
+      that apply to a particular client or transaction.
+    </p>
+
+    <p>
+      Any disputes should first be addressed
+      through good-faith communication. Applicable
+      legal remedies and jurisdiction will be
+      determined by relevant law.
+    </p>
+  </section>
+
+
+  <!-- 14 -->
+
+  <section class="terms-block">
+    <h2><span>14.</span> Changes to These Terms</h2>
+
+    <p>
+      JR Web Agency may update these Terms and
+      Conditions when necessary to reflect changes
+      in services, business practices or legal
+      requirements.
+    </p>
+
+    <p>
+      Updated terms will be published on this page
+      with a revised Last Updated date. Continued
+      use after an update will be subject to the
+      extent permitted by applicable law.
+    </p>
+  </section>
+
+
+  <!-- 15 -->
+
+  <section class="terms-block">
+    <h2><span>15.</span> Contact Information</h2>
+
+    <p>
+      If you have any questions regarding these
+      Terms and Conditions, please contact us:
+    </p>
+
+    <ul>
+      <li><strong>Agency:</strong> JR Web Agency</li>
+      <li><strong>Email:</strong> jrwebagency@gmail.com</li>
+      <li><strong>Phone:</strong> +92 307 3322813</li>
+      <li><strong>Location:</strong> Multan, Punjab, Pakistan</li>
+    </ul>
+  </section>
+
+
+  <!-- CTA -->
+
+  <div class="terms-contact">
+
+    <h2>Let's Work <span>Together.</span></h2>
+
+    <p>
+      Have questions about our services or terms?
+      Our team is ready to assist you.
+    </p>
+
+    <a href="contact.html">
+      Contact Our Team 
+    </a>
+
+  </div>
+
+</main>
+<script>
+  /* =================================
+   MOBILE NAVBAR TOGGLE
+================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    if (isOpen) {
+        menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+    } else {
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+});
+
+// Close menu after clicking a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    });
+
+});
+</script>
+</body>
+</html>

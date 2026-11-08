@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | JR Web Agency</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0c0c0c;
+    color: #fff;
+}
+
+:root {
+    --gold: #ffc928;
+    --dark: #0c0c0c;
+    --card: #171717;
+    --gray: #aaa;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #101010;
+    border-bottom: 1px solid #252525;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--gold);
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #111;
+    background: var(--gold);
+    padding: 11px 23px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    padding: 90px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background:
+        radial-gradient(circle at 80% 50%, #332500 0%, transparent 35%),
+        #101010;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.cta h2 span {
+    color: var(--gold);
+}
+
+.hero p,
+.section-heading p,
+.cta p {
+    color: var(--gray);
+    line-height: 1.9;
+    font-size: 14px;
+    max-width: 550px;
+}
+
+.primary-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 27px;
+    background: var(--gold);
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    background: #fff;
+    transform: translateY(-4px);
+}
+
+/* HERO DECORATION */
+
+.hero-decoration {
+    width: 360px;
+    height: 300px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.hero-card {
+    position: relative;
+    z-index: 2;
+    background: #1b1b1b;
+    border: 1px solid #66501a;
+    padding: 45px 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 60px #000;
+}
+
+.hero-card span {
+    font-size: 65px;
+    font-weight: 800;
+    color: var(--gold);
+}
+
+.hero-card h3 {
+    margin: 12px 0;
+    font-size: 19px;
+}
+
+.hero-card p {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid #ffc92855;
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 300px;
+    height: 300px;
+}
+
+.circle-two {
+    width: 230px;
+    height: 230px;
+}
+
+/* STATS */
+
+.stats {
+    padding: 45px 10%;
+    background: #171717;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.stat h2 {
+    color: var(--gold);
+    font-size: 35px;
+}
+
+.stat p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* PROJECT SECTION */
+
+.projects-section {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    margin: auto;
+}
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.filter-btn {
+    background: #1b1b1b;
+    color: #ddd;
+    border: 1px solid #333;
+    padding: 11px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: .3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gold);
+    color: #111;
+    border-color: var(--gold);
+}
+
+/* PROJECT GRID */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.project-card:hover {
+    transform: translateY(-9px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px #0008;
+}
+
+.project-card.hide {
+    display: none;
+}
+
+.project-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: #0009;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .3s;
+}
+
+.project-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay a {
+    background: var(--gold);
+    color: #111;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.category {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.project-info h3 {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.project-info p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--gray);
+    min-height: 70px;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.technologies span {
+    background: #282828;
+    color: #ddd;
+    padding: 6px 11px;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    padding: 90px 20px;
+    background:
+        radial-gradient(circle, #332500 0%, transparent 65%),
+        #151515;
+}
+
+.cta h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 20px 0;
+}
+
+.cta p {
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+    background: #080808;
+    padding: 55px 20px 25px;
+    text-align: center;
+    border-top: 1px solid #252525;
+}
+
+footer p {
+    color: var(--gray);
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    border-top: 1px solid #252525;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1000px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .navbar {
+        padding: 18px 6%;
+    }
+
+    .navbar nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #151515;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        display: none;
+    }
+
+    .navbar nav.show {
+        display: flex;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 75px 7%;
+    }
+
+    .hero p {
+        margin: auto;
+    }
+
+    .hero-decoration {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .stats {
+        padding: 40px 5%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-section {
+        padding: 75px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 400px) {
+    .filters {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+}
+ .site-header {
+    min-height: 80px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #090909;
+    border-bottom: 1px solid #292929;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+.logo {
+    color: #ffc928;
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span,
+.site-footer h3 span {
+    color: white;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.site-header nav a,
+.footer-links a {
+    color: #ddd;
+    font-size: 14px;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.site-header nav a:hover,
+.footer-links a:hover {
+    color: #ffc928;
+}
+
+
+
+
+
+
+
+
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    background: #08090B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-jr {
+    color: #ffc928;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* DESKTOP NAVIGATION */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc928;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffc928;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: static; /* Important: overlay khatam */
+
+        width: 100%;
+        background: #11163f;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+/* DESKTOP: HAMBURGER ALWAYS HIDDEN */
+@media (min-width: 769px) {
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+}
+
+/* MOBILE MENU FIX */
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none !important;
+        width: 100%;
+        position: static;
+        flex-direction: column;
+        background: #11163f;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE HAMBURGER FIX */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffc928;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .nav-links {
+        display: none !important;
+        position: static;
+        width: 100%;
+        flex-direction: column;
+        background: #08090B;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+   
+       <header class="navbar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-jr">JR</span>
+        <span>WEB AGENCY</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+         <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+       <a href="https://ranasalmanali3535.github.io/ranasalmanali_portfolio/">Portfolio</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+            <span class="small-title">OUR PORTFOLIO</span>
+
+            <h1>Turning Ideas Into <span>Digital Reality.</span></h1>
+
+            <p>
+                Explore our creative work, innovative websites and
+                digital solutions designed to help businesses grow.
+            </p>
+
+            <a href="#projects" class="primary-btn">
+                Explore Projects →
+            </a>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="hero-card">
+                <span>JR</span>
+                <h3>Creative Digital Solutions</h3>
+                <p>Design. Develop. Deliver.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="stat">
+            <h2>10+</h2>
+            <p>Projects Built</p>
+        </div>
+
+        <div class="stat">
+            <h2>5+</h2>
+            <p>Technologies</p>
+        </div>
+
+        <div class="stat">
+            <h2>100%</h2>
+            <p>Creative Approach</p>
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+
+        <div class="section-heading">
+            <span class="small-title">OUR WORK</span>
+            <h2>Featured <span>Projects</span></h2>
+            <p>
+                A collection of websites and digital experiences
+                created with passion and creativity.
+            </p>
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="wordpress">WordPress</button>
+            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        </div>
+
+
+        <!-- PROJECT GRID -->
+        <div class="project-grid">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card" data-category="web">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900" alt="Business Website">
+
+                    <div class="image-overlay">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <span class="category">WEB DEVELOPMENT</span>
+                    <h3>Business Website</h3>
+                    <p>
+                        A modern business website with a clean design
+                        and responsive layout.
+                    </p>
+
+                    <div class="technologies">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+            <div class="project-card" data-category="ecommerce">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900" alt="Ecommerce Website">
+
+                    <div class="image-overlay">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <span class="category">E-COMMERCE</span>
+                    <h3>Online Shopping Store</h3>
+                    <p>
+                        An online shopping platform with product
+                        categories and a modern shopping experience.
+                    </p>
+
+                    <div class="technologies">
+                        <span>React</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+            <div class="project-card" data-category="wordpress">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900" alt="WordPress Website">
+
+                    <div class="image-overlay">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <span class="category">WORDPRESS</span>
+                    <h3>WordPress Website</h3>
+                    <p>
+                        A professional WordPress website designed
+                        for a growing business.
+                    </p>
+
+                    <div class="technologies">
+                        <span>WordPress</span>
+                        <span>Elementor</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+            <div class="project-card" data-category="web">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900" alt="Calculator App">
+
+                    <div class="image-overlay">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <span class="category">WEB DEVELOPMENT</span>
+                    <h3>Calculator Application</h3>
+                    <p>
+                        A simple and interactive calculator
+                        with a clean user interface.
+                    </p>
+
+                    <div class="technologies">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 5 -->
+            <div class="project-card" data-category="ecommerce">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900" alt="Fashion Store">
+
+                    <div class="image-overlay">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <span class="category">E-COMMERCE</span>
+                    <h3>Fashion Store</h3>
+                    <p>
+                        A stylish online fashion store
+                        with a user-friendly interface.
+                    </p>
+
+                    <div class="technologies">
+                        <span>WordPress</span>
+                        <span>WooCommerce</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 6 -->
+            <div class="project-card" data-category="web">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900" alt="Portfolio Website">
+
+                    <div class="image-overlay">
+                        <a href="#" target="_blank">Live Demo ↗</a>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <span class="category">WEB DEVELOPMENT</span>
+                    <h3>Personal Portfolio</h3>
+                    <p>
+                        A professional portfolio website
+                        showcasing skills and creative work.
+                    </p>
+
+                    <div class="technologies">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+
+        <span class="small-title">HAVE A PROJECT IN MIND?</span>
+
+        <h2>Let's Build Something <span>Amazing Together.</span></h2>
+
+        <p>
+            Have an idea? Let's turn it into a professional
+            digital experience.
+        </p>
+
+        <a href="contact.html" class="primary-btn">
+            Start Your Project →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+            <a href="index.html" class="logo">JR<span>WEB</span></a>
+
+            <p>Your Vision | Our Web Solutions</p>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <p class="copyright">
+                © 2026 JR Web Agency. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script>
+        
+// MOBILE MENU
+
+/* =================================
+   MOBILE NAVBAR TOGGLE
+================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    if (isOpen) {
+        menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+    } else {
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+});
+
+// Close menu after clicking a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    });
+
+});
+
+
+// PROJECT FILTERING
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        // Remove active class
+        filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const filterValue = button.getAttribute("data-filter");
+
+        projectCards.forEach(card => {
+
+            const category = card.getAttribute("data-category");
+
+            if (filterValue === "all" || filterValue === category) {
+                card.classList.remove("hide");
+            } else {
+                card.classList.add("hide");
+            }
+
+        });
+
+    });
+
+});
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

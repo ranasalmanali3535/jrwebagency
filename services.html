@@ -1,0 +1,1693 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Services | JR Web Agency</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<style>
+
+:root {
+    --black: #090909;
+    --card: #141414;
+    --gold: #ffc928;
+    --white: #ffffff;
+    --gray: #a4a4a4;
+    --border: #292929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+}
+      .site-header {
+    min-height: 80px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #090909;
+    border-bottom: 1px solid #292929;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+.logo {
+    color: #ffc928;
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span,
+.site-footer h3 span {
+    color: white;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.site-header nav a,
+.footer-links a {
+    color: #ddd;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.site-header nav a:hover,
+.footer-links a:hover {
+    color: #ffc928;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+.section {
+    padding: 95px 7%;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+}
+
+.section-title span {
+    color: var(--gold);
+}
+
+.description {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px 26px;
+    background: var(--gold);
+    color: #090909;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.gold-btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+/* =========================
+   1. HERO SECTION
+========================= */
+
+.services-hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 90px 7%;
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,.96),
+    rgba(0,0,0,.60)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800")
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-content h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(42px, 6vw, 65px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    color: #c0c0c0;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 620px;
+    margin-bottom: 30px;
+}
+
+.breadcrumb {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 25px;
+}
+.breadcrumb a {
+    color: #aaa;
+}
+
+.breadcrumb span {
+    color: var(--gold);
+    margin: 0 10px;
+}
+
+/* =========================
+   2. INTRODUCTION
+========================= */
+
+.services-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.services-intro .description {
+    margin-top: 20px;
+}
+
+/* =========================
+   3. SERVICES GRID
+========================= */
+
+.services-section {
+    padding-top: 25px;
+}
+
+.services-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-heading .description {
+    max-width: 650px;
+    margin: 18px auto 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    overflow: hidden;
+    transition: .35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+.service-number {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(255,201,40,.13);
+}
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    background: rgba(255,201,40,.12);
+    color: var(--gold);
+    border-radius: 10px;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.service-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.service-list li {
+    color: #d0d0d0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-list li::before {
+    content: "✓";
+    color: var(--gold);
+    font-weight: 800;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.service-link:hover {
+    gap: 17px;
+}
+
+/* =========================
+   4. WHY CHOOSE US
+========================= */
+
+.why-section {
+    background: #101010;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.why-image {
+    position: relative;
+}
+
+.why-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.why-content h2 {
+    margin-bottom: 20px;
+}
+
+.why-content > .description {
+    margin-bottom: 30px;
+}
+
+.why-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.why-feature {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.why-check {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    background: rgba(255,201,40,.12);
+    border-radius: 50%;
+}
+
+.why-feature h4 {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.why-feature p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================
+   5. WORK PROCESS
+========================= */
+
+.process-section {
+    text-align: center;
+}
+
+.process-heading {
+    margin-bottom: 50px;
+}
+
+.process-heading .description {
+    max-width: 600px;
+    margin: 18px auto 0;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    padding: 30px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.process-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+}
+
+.process-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+.process-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   6. TECHNOLOGIES
+========================= */
+
+.tech-section {
+    background: #101010;
+    text-align: center;
+}
+
+.tech-heading {
+    margin-bottom: 40px;
+}
+
+.tech-heading .description {
+    margin: 15px auto 0;
+}
+
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-item {
+    padding: 17px 25px;
+    border: 1px solid var(--border);
+    background: #171717;
+    color: #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.tech-item:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+/* =========================
+   7. FAQ SECTION
+========================= */
+
+.faq-section {
+    text-align: center;
+}
+
+.faq-heading {
+    margin-bottom: 40px;
+}
+
+.faq-heading .description {
+    margin: 15px auto 0;
+    max-width: 650px;
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.faq-question span {
+    color: var(--gold);
+    font-size: 22px;
+    transition: .3s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 21px 21px;
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   8. FINAL CTA
+========================= */
+
+.services-cta {
+    padding: 20px 7% 100px;
+}
+
+.cta-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 30px;
+    text-align: center;
+    border: 1px solid #40351c;
+    border-radius: 12px;
+    background:
+    linear-gradient(rgba(0,0,0,.91),rgba(0,0,0,.93)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200")
+    center/cover;
+}
+
+.cta-inner h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 18px;
+}
+
+.cta-inner h2 span {
+    color: var(--gold);
+}
+
+.cta-inner p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 950px) {
+
+    .section {
+        padding: 75px 5%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        gap: 35px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 650px) {
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .services-hero {
+        min-height: 430px;
+        padding: 70px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 27px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .why-image img {
+        height: 310px;
+    }
+
+    .why-features {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .process-card {
+        padding: 24px 12px;
+    }
+
+    .process-card h3 {
+        font-size: 16px;
+    }
+
+    .process-card p {
+        font-size: 12px;
+    }
+
+    .tech-grid {
+        gap: 10px;
+    }
+
+    .tech-item {
+        padding: 13px 17px;
+        font-size: 12px;
+    }
+
+    .faq-question {
+        font-size: 14px;
+    }
+
+    .services-cta {
+        padding: 15px 6% 70px;
+    }
+
+    .cta-inner {
+        padding: 45px 20px;
+    }
+
+}
+
+@media(max-width: 380px) {
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    background: #08090B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-jr {
+    color: #ffc928;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* DESKTOP NAVIGATION */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc928;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffc928;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: static; /* Important: overlay khatam */
+
+        width: 100%;
+        background: #11163f;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+/* DESKTOP: HAMBURGER ALWAYS HIDDEN */
+@media (min-width: 769px) {
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+}
+
+/* MOBILE MENU FIX */
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none !important;
+        width: 100%;
+        position: static;
+        flex-direction: column;
+        background: #11163f;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE HAMBURGER FIX */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffc928;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .nav-links {
+        display: none !important;
+        position: static;
+        width: 100%;
+        flex-direction: column;
+        background: #08090B;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-jr">JR</span>
+        <span>WEB AGENCY</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+         <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+       <a href="https://ranasalmanali3535.github.io/ranasalmanali_portfolio/">Portfolio</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+<!-- =========================
+     1. HERO SECTION
+========================= -->
+
+<section class="services-hero">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">WHAT WE DO</span>
+
+        <h1>
+            Digital Solutions
+            That Drive Your
+            <span>Business Forward.</span>
+        </h1>
+
+        <p>
+            We provide creative, modern, and reliable digital
+            solutions to help businesses build a strong online
+            presence, connect with customers, and achieve their goals.
+        </p>
+
+        <a href="#our-services" class="gold-btn">
+            Explore Our Services →
+        </a>
+
+        <div class="breadcrumb">
+           <a href="index.html">Home</a>  <span>/</span> Services
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     2. INTRODUCTION
+========================= -->
+
+<section class="section">
+
+    <div class="container services-intro">
+
+        <span class="eyebrow">OUR EXPERTISE</span>
+
+        <h2 class="section-title">
+            Everything Your Business Needs
+            to <span>Grow Digitally.</span>
+        </h2>
+
+        <p class="description">
+            At JR Web Agency, we combine creativity, technology,
+            and strategic thinking to deliver digital solutions
+            tailored to your business needs.
+
+            Whether you're launching a new business, building
+            an online store, or upgrading your existing website,
+            we're here to help turn your ideas into reality.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     3. OUR SERVICES
+========================= -->
+
+<section class="section services-section" id="our-services">
+
+    <div class="container">
+
+        <div class="services-heading">
+
+            <span class="eyebrow">WHAT WE OFFER</span>
+
+            <h2 class="section-title">
+                Explore Our <span>Digital Services.</span>
+            </h2>
+
+            <p class="description">
+                Discover the services we provide to help
+                businesses establish, improve, and grow
+                their digital presence.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- SERVICE 1 -->
+
+            <div class="service-card">
+
+                <span class="service-number">01</span>
+
+                <div class="service-icon">⌘</div>
+
+                <h3>Website Development</h3>
+
+                <p>
+                    We create modern, responsive, and
+                    user-friendly websites that represent
+                    your brand and deliver excellent
+                    user experiences.
+                </p>
+
+                <ul class="service-list">
+                    <li>Custom Website Development</li>
+                    <li>Responsive Web Design</li>
+                    <li>Frontend Development</li>
+                    <li>Backend Development</li>
+                    <li>Website Maintenance</li>
+                </ul>
+
+                <a href="contact.html" class="service-link">
+                    Discuss Your Project →
+                </a>
+
+            </div>
+
+
+            <!-- SERVICE 2 -->
+
+            <div class="service-card">
+
+                <span class="service-number">02</span>
+
+                <div class="service-icon">▣</div>
+
+                <h3>WordPress Development</h3>
+
+                <p>
+                    Build powerful websites with WordPress,
+                    designed to be flexible, easy to manage,
+                    and tailored to your business.
+                </p>
+
+                <ul class="service-list">
+                    <li>Business Websites</li>
+                    <li>WordPress Customization</li>
+                    <li>Elementor Website Design</li>
+                    <li>WordPress E-Commerce</li>
+                    <li>Website Redesign</li>
+                </ul>
+
+                <a href="contact.html" class="service-link">
+                    Discuss Your Project →
+                </a>
+
+            </div>
+
+
+            <!-- SERVICE 3 -->
+
+            <div class="service-card">
+
+                <span class="service-number">03</span>
+
+                <div class="service-icon">🛒</div>
+
+                <h3>E-Commerce Development</h3>
+
+                <p>
+                    We build online stores that provide
+                    smooth shopping experiences and help
+                    businesses sell products online.
+                </p>
+
+                <ul class="service-list">
+                    <li>Online Store Development</li>
+                    <li>Product Management</li>
+                    <li>Shopping Cart Integration</li>
+                    <li>Payment Gateway Integration</li>
+                    <li>Store Customization</li>
+                </ul>
+
+                <a href="contact.html" class="service-link">
+                    Discuss Your Project →
+                </a>
+
+            </div>
+
+
+            <!-- SERVICE 4 -->
+
+            <div class="service-card">
+
+                <span class="service-number">04</span>
+
+                <div class="service-icon">✎</div>
+
+                <h3>UI/UX Design</h3>
+
+                <p>
+                    We design attractive and intuitive
+                    interfaces that make websites easier
+                    to navigate and enjoyable to use.
+                </p>
+
+                <ul class="service-list">
+                    <li>Website UI Design</li>
+                    <li>User Experience Design</li>
+                    <li>Wireframing</li>
+                    <li>Prototyping</li>
+                    <li>Responsive Layout Design</li>
+                </ul>
+
+                <a href="contact.html" class="service-link">
+                    Discuss Your Project →
+                </a>
+
+            </div>
+
+
+            <!-- SERVICE 5 -->
+
+            <div class="service-card">
+
+                <span class="service-number">05</span>
+
+                <div class="service-icon">⌕</div>
+
+                <h3>SEO Optimization</h3>
+
+                <p>
+                    Improve your website's search visibility
+                    through SEO best practices and technical
+                    improvements.
+                </p>
+
+                <ul class="service-list">
+                    <li>On-Page SEO</li>
+                    <li>Technical SEO</li>
+                    <li>Keyword Research</li>
+                    <li>Website Performance</li>
+                    <li>SEO Audits</li>
+                </ul>
+
+                <a href="contact.html" class="service-link">
+                    Discuss Your Project →
+                </a>
+
+            </div>
+
+
+            <!-- SERVICE 6 -->
+
+            <div class="service-card">
+
+                <span class="service-number">06</span>
+
+                <div class="service-icon">✧</div>
+
+                <h3>AI Solutions</h3>
+
+                <p>
+                    We explore AI-powered solutions that
+                    help businesses improve digital
+                    interactions and automate tasks.
+                </p>
+
+                <ul class="service-list">
+                    <li>AI Chatbot Development</li>
+                    <li>AI-Powered Applications</li>
+                    <li>Workflow Automation</li>
+                    <li>AI API Integration</li>
+                    <li>Custom AI Solutions</li>
+                </ul>
+
+                <a href="contact.html" class="service-link">
+                    Discuss Your Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     4. WHY CHOOSE US
+========================= -->
+
+<section class="section why-section">
+
+    <div class="container why-grid">
+
+        <div class="why-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1000"
+                alt="Professional digital agency team">
+
+        </div>
+
+        <div class="why-content">
+
+            <span class="eyebrow">WHY CHOOSE JR WEB AGENCY</span>
+
+            <h2 class="section-title">
+                We Focus on What
+                <span>Matters Most.</span>
+            </h2>
+
+            <p class="description">
+                We believe great digital solutions come from
+                understanding business goals, choosing the
+                right technology, and paying attention to
+                every detail.
+            </p>
+
+            <div class="why-features">
+
+                <div class="why-feature">
+                    <span class="why-check">✓</span>
+                    <div>
+                        <h4>Modern Design</h4>
+                        <p>Clean and attractive interfaces.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <span class="why-check">✓</span>
+                    <div>
+                        <h4>Responsive Layout</h4>
+                        <p>Designed for all screen sizes.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <span class="why-check">✓</span>
+                    <div>
+                        <h4>Quality Focus</h4>
+                        <p>Attention to details and usability.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <span class="why-check">✓</span>
+                    <div>
+                        <h4>Clear Communication</h4>
+                        <p>Understanding your requirements.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     5. OUR PROCESS
+========================= -->
+
+<section class="section process-section">
+
+    <div class="container">
+
+        <div class="process-heading">
+
+            <span class="eyebrow">HOW WE WORK</span>
+
+            <h2 class="section-title">
+                Our Simple <span>Work Process.</span>
+            </h2>
+
+            <p class="description">
+                We follow a structured process to transform
+                your ideas into effective digital solutions.
+            </p>
+
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <div class="process-number">01</div>
+                <h3>Discovery</h3>
+                <p>
+                    We understand your business,
+                    requirements, and project goals.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">02</div>
+                <h3>Planning</h3>
+                <p>
+                    We prepare a clear strategy
+                    and development roadmap.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">03</div>
+                <h3>Development</h3>
+                <p>
+                    We build and refine your
+                    digital solution.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">04</div>
+                <h3>Delivery</h3>
+                <p>
+                    We test the final product
+                    and prepare it for launch.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     6. TECHNOLOGIES
+========================= -->
+
+<section class="section tech-section">
+
+    <div class="container">
+
+        <div class="tech-heading">
+
+            <span class="eyebrow">OUR TECHNOLOGY STACK</span>
+
+            <h2 class="section-title">
+                Technologies We <span>Work With.</span>
+            </h2>
+
+            <p class="description">
+                We use modern technologies and development
+                tools to create reliable digital experiences.
+            </p>
+
+        </div>
+
+        <div class="tech-grid">
+
+            <div class="tech-item">HTML5</div>
+            <div class="tech-item">CSS3</div>
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">React</div>
+            <div class="tech-item">Node.js</div>
+            <div class="tech-item">Express.js</div>
+            <div class="tech-item">MongoDB</div>
+            <div class="tech-item">MySQL</div>
+            <div class="tech-item">WordPress</div>
+            <div class="tech-item">PHP</div>
+            <div class="tech-item">Figma</div>
+            <div class="tech-item">Tailwind CSS</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     7. FAQ
+========================= -->
+
+<section class="section faq-section">
+
+    <div class="container">
+
+        <div class="faq-heading">
+
+            <span class="eyebrow">COMMON QUESTIONS</span>
+
+            <h2 class="section-title">
+                Frequently Asked <span>Questions.</span>
+            </h2>
+
+            <p class="description">
+                Find answers to common questions about
+                our services and development process.
+            </p>
+
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item active">
+
+                <button class="faq-question"
+                    type="button" aria-expanded="true">
+
+                    What services does JR Web Agency provide?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+                    We offer website development, WordPress
+                    development, e-commerce solutions,
+                    UI/UX design, SEO optimization,
+                    and AI-powered digital solutions.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question"
+                    type="button" aria-expanded="false">
+
+                    Are your websites mobile-friendly?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+                    Yes. We focus on responsive web design
+                    to ensure websites work smoothly
+                    across desktops, tablets, and smartphones.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question"
+                    type="button" aria-expanded="false">
+
+                    How much does website development cost?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+                    Pricing depends on the project's
+                    requirements, features, complexity,
+                    and development time. Contact us
+                    for a project-specific quotation.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question"
+                    type="button" aria-expanded="false">
+
+                    How long does it take to complete a project?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+                    The timeline depends on the scope
+                    and complexity of your project.
+                    We discuss the estimated delivery
+                    schedule before development begins.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question"
+                    type="button" aria-expanded="false">
+
+                    How can I get started?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+                    Simply contact us through our contact
+                    page or email. Share your project
+                    requirements, and we can discuss
+                    the next steps.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     8. FINAL CTA
+========================= -->
+
+<section class="services-cta">
+
+    <div class="cta-inner">
+
+        <span class="eyebrow">LET'S BUILD SOMETHING GREAT</span>
+
+        <h2>
+            Ready to Transform Your
+            <span>Digital Presence?</span>
+        </h2>
+
+        <p>
+            Tell us about your ideas and goals.
+            Let's work together to create something
+            meaningful for your business.
+        </p>
+
+        <a href="contact.html" class="gold-btn">
+            Start Your Project →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+// FAQ ACCORDION
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+
+        const isOpen = item.classList.contains('active');
+
+        faqItems.forEach(faq => {
+
+            faq.classList.remove('active');
+
+            faq.querySelector('.faq-question')
+                .setAttribute('aria-expanded', 'false');
+
+        });
+
+        if (!isOpen) {
+
+            item.classList.add('active');
+
+            question.setAttribute('aria-expanded', 'true');
+
+        }
+
+    });
+
+});
+
+/* =================================
+   MOBILE NAVBAR TOGGLE
+================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    if (isOpen) {
+        menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close navigation menu");
+    } else {
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+});
+
+// Close menu after clicking a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
